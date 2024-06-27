@@ -1,0 +1,126 @@
+﻿<Window x:Class="ChatUDP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatUDP"
+        mc:Ignorable="d"
+        
+        Title="Регистрация" 
+        Height="700px" 
+        Width="300px" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="CanResize" 
+        ShowInTaskbar="True" 
+        MinWidth="500px" 
+        MinHeight="700" 
+        x:Name="Title">
+
+    <Grid Margin="20px">
+        <Border Background="#3399FF" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Width="440" 
+                Height="624"
+                CornerRadius="20">
+            <Grid x:Name="regForm"
+                  Margin="11px">
+                <Grid x:Name="FullNameForm"
+                      Width="190px" Height="80px"
+                      HorizontalAlignment="Center" Margin="0,10,0,512">
+                    <Label
+                        Content="Введите ФИО"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        FontSize="16" Margin="0,10,0,0">
+                    </Label>
+                    <TextBox Width="190px" Height="35"
+                                 VerticalAlignment="Bottom"
+                                 x:Name="FullNameBox"
+                                 FontSize="18"
+                                 VerticalContentAlignment="Center"
+                                 HorizontalContentAlignment="Center"
+                                 Padding="5, 0, 5, 0"
+                                 MaxLength="160">
+                    </TextBox>
+                </Grid>
+                <Grid x:Name="PasswordForm"
+                      Width="190px" Height="80px"
+                      HorizontalAlignment="Center" Margin="0,95,0,427">
+                    <Grid>
+                        <Label
+                            Content="Введите пароль"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            FontSize="16" Margin="0,10,0,0">
+                        </Label>
+                        <PasswordBox Width="190px" Height="35"
+                                 VerticalAlignment="Bottom"
+                                 x:Name="UserPasswordBox"
+                                 VerticalContentAlignment="Center"
+                                 HorizontalContentAlignment="Center"
+                                 FontSize="18">
+                        </PasswordBox>
+                    </Grid>
+
+                    <Grid Margin="0,80,0,-80">
+                        <Label
+                            Content="Подтвердите пароль"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            FontSize="16" Margin="0,10,0,0">
+                        </Label>
+                        <PasswordBox Width="190px" Height="35"
+                                 VerticalAlignment="Bottom"
+                                 x:Name="UserRepeatPasswordBox"
+                                 VerticalContentAlignment="Center"
+                                 HorizontalContentAlignment="Center"
+                                 FontSize="18">
+                        </PasswordBox>
+                    </Grid>
+                </Grid>
+                <Grid x:Name="EmailForm"
+                      Width="190px" Height="80px"
+                      HorizontalAlignment="Center" Margin="0,261,0,261">
+                    <Label
+                        Content="Введите почту"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        FontSize="16" Margin="0,10,0,0">
+                    </Label>
+                    <TextBox Width="190px" Height="35"
+                             VerticalAlignment="Bottom"
+                             x:Name="EmailBox"
+                             VerticalContentAlignment="Center"
+                             HorizontalContentAlignment="Center"
+                             FontSize="18">
+                    </TextBox>
+                </Grid>
+                <Grid x:Name="BirthdayForm"
+                      Width="190px"
+                      HorizontalAlignment="Center" Margin="0,346,0,126">
+                    <Label
+                        Content="Укажите дату рождения"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        FontSize="16" Margin="0,10,0,0">
+                    </Label>
+                    <DatePicker Width="190px"
+                             VerticalAlignment="Top"
+                             x:Name="BirthdayBox" Margin="0,46,0,0" Background="Transparent">
+                    </DatePicker>
+                </Grid>
+                <Grid x:Name="ConfirmRegButton"
+                      Width="190px"
+                      HorizontalAlignment="Center" Margin="0,429,0,126">
+                    <Button x:Name="RegButton"
+                            Click="RegButton_Click"
+                            Content="Зарегистрироваться" 
+                            Height="40px" 
+                            Margin="10,10,10,-5"
+                            FontSize="16"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
